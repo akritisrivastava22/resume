@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Player</title>
+  <style>
+    .music-player {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .music-player audio {
+      width: 300px;
+      margin-bottom: 10px;
+    }
+    
+    .music-player button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .music-player button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="music-player">
+    <audio src="Krishnaflute.mp3" controls></audio>
+    <button onclick="playAudio()">Play</button>
+    <button onclick="pauseAudio()">Pause</button>
+    <button onclick="stopAudio()">Stop</button>
+  </div>
+
+  <script>
+    var audioPlayer = document.querySelector('audio');
+
+    function playAudio() {
+      audioPlayer.play();
+    }
+
+    function pauseAudio() {
+      audioPlayer.pause();
+    }
+
+    function stopAudio() {
+      audioPlayer.pause();
+      audioPlayer.currentTime = 0;
+    }
+  </script>
+</body>
+</html>
